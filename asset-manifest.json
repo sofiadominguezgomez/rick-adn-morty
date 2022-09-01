@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rick-adn-morty/static/css/main.494ae56a.css",
+    "main.css": "/rick-adn-morty/static/css/main.d33a3460.css",
     "main.js": "/rick-adn-morty/static/js/main.c3315260.js",
     "static/js/787.8bb3a7e4.chunk.js": "/rick-adn-morty/static/js/787.8bb3a7e4.chunk.js",
     "index.html": "/rick-adn-morty/index.html",
-    "main.494ae56a.css.map": "/rick-adn-morty/static/css/main.494ae56a.css.map",
+    "main.d33a3460.css.map": "/rick-adn-morty/static/css/main.d33a3460.css.map",
     "main.c3315260.js.map": "/rick-adn-morty/static/js/main.c3315260.js.map",
     "787.8bb3a7e4.chunk.js.map": "/rick-adn-morty/static/js/787.8bb3a7e4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.494ae56a.css",
+    "static/css/main.d33a3460.css",
     "static/js/main.c3315260.js"
   ]
 }
