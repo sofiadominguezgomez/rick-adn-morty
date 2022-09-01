@@ -70,11 +70,17 @@ body {
 
 .character img {
    margin-bottom: 0.5rem;
+   -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
    
 }
 
 .character img:hover {
    border: 0.4rem solid rgb(160, 156, 120);
+   -webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 .moreInfo {
