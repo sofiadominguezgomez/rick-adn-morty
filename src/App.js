@@ -29,6 +29,7 @@ function App() {
     .then( (data) => {
         setPersonajes(data.results)
         setLoading(false)
+        console.log(personajes)
     })
 }, [page])
 
@@ -37,7 +38,7 @@ function App() {
         <h4> ¿Dejaste prendido el horno? </h4>
       )
   }
- 
+
   return (
       <>
         <div className={ fix ? `${styles.buttonbar} ${styles.fixed}` : styles.buttonbar}>

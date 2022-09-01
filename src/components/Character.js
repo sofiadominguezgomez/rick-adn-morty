@@ -15,7 +15,7 @@ const Character = ({name, image, status, species, type, gender}) =>{
         <div className={styles.moreInfo}>
           <p>Status: {status} </p>
           <p>Species: {species} </p>
-          <p>Type: {type} </p>
+          <p>Type: {type !== "" ? type : "Unknown"} </p>
           <p>Gender: {gender} </p>
         </div>
         : null
