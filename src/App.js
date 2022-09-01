@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import styles from './styles/container.module.css'
 import Character from './components/Character';
 
@@ -9,9 +8,13 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [page, setPage] = useState(1)
   const [personajes, setPersonajes] = useState([])
+  const [fix, setFix] = useState(false)
+  
 
+  const isScrolling = () => window.scrollY ? setFix(true) : setFix(false)
+
+  window.addEventListener("scroll", isScrolling)
   useEffect( () => {
-    console.log('1')
       fetch(`${endpoint}${page}`)
       .then( (response) => response.json())
       .then( (data) => {
@@ -24,36 +27,30 @@ function App() {
     fetch(`${endpoint}${page}`)
     .then( (response) => response.json())
     .then( (data) => {
-        console.log('page')
         setPersonajes(data.results)
         setLoading(false)
     })
 }, [page])
 
-  const handleNext = () => {
-      setPage(page+1)
-  }
-  
-  const handlePrevious = () => {
-      if(page > 1){
-        setPage(page-1)
-      }
-  }
-
-
   if(loading){
       return (
-        <h4>Obteniendo informacion....</h4>
+        <h4> ¿Dejaste prendido el horno? </h4>
       )
   }
  
   return (
       <>
-        <div className={styles.buttonbar}>
-            <button onClick={handlePrevious}>Previo</button>
-            <button onClick={handleNext}>Siguiente</button>
+        <div className={ fix ? `${styles.buttonbar} ${styles.fixed}` : styles.buttonbar}>
+            <button className={styles.btn} onClick={() => setPage(1)} disabled={ page === 1 ? true : false }> First </button>
+            <button className={styles.btn} onClick={() => (page > 1) ? setPage(page-1) : null} disabled={ page === 1 ? true : false } > Previous </button>
+             <p> {page} </p> 
+            <button className={styles.btn} onClick={() => setPage(page+1)} disabled={ page === 42 ? true : false } > Next </button>
+            <button className={styles.btn} onClick={() => setPage(42)} disabled={ page === 42 ? true : false }>Last</button>
         </div>
-        {personajes.map( (personaje) => <Character key={personaje.id} name={personaje.name} image={personaje.image} />)}
+        <div className={styles.charactersContainer}>
+          {personajes.map( (p) => <Character key={p.id} name={p.name} image={p.image} status={p.status} species={p.species} type={p.type} gender={p.gender} />)}
+        </div>
+        
       </>
   );
 }
