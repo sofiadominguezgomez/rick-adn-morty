@@ -23,16 +23,8 @@ function App() {
           setLoading(false)
       })
       .catch("MacanaaaaaAAAAAAAAAAAAAAAAAAAAAAAaaaaaaAAAAAAAAAAAAAaaaaaaAAAAAAAAAAAaa")
-  }, [])
+  }, [page])
 
-  useEffect( () => {
-    fetch(`${endpoint}${page}`)
-    .then( (response) => response.json())
-    .then( (data) => {
-        setPersonajes(data.results)
-        setLoading(false)
-    })
-}, [page])
 
   if(loading){
       return (
