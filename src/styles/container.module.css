@@ -3,7 +3,6 @@ body {
    background-color: rgb(250, 241, 211);
 }
 .buttonbar{
-   overflow: hidden;
    display: flex;
    gap: 1rem;
    width: 100%;
@@ -70,8 +69,7 @@ body {
 
 .character img {
    margin-bottom: 0.5rem;
-   -webkit-transform: scale(1);
-	transform: scale(1);
+
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
    
