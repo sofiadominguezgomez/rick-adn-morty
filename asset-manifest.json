@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rick-adn-morty/static/css/main.a638bd22.css",
+    "main.js": "/rick-adn-morty/static/js/main.07c03333.js",
+    "static/js/787.8bb3a7e4.chunk.js": "/rick-adn-morty/static/js/787.8bb3a7e4.chunk.js",
+    "index.html": "/rick-adn-morty/index.html",
+    "main.a638bd22.css.map": "/rick-adn-morty/static/css/main.a638bd22.css.map",
+    "main.07c03333.js.map": "/rick-adn-morty/static/js/main.07c03333.js.map",
+    "787.8bb3a7e4.chunk.js.map": "/rick-adn-morty/static/js/787.8bb3a7e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a638bd22.css",
+    "static/js/main.07c03333.js"
+  ]
+}
