@@ -14,6 +14,7 @@ function App() {
   const isScrolling = () => window.scrollY ? setFix(true) : setFix(false)
 
   window.addEventListener("scroll", isScrolling)
+  
   useEffect( () => {
       fetch(`${endpoint}${page}`)
       .then( (response) => response.json())
@@ -29,7 +30,6 @@ function App() {
     .then( (data) => {
         setPersonajes(data.results)
         setLoading(false)
-        console.log(personajes)
     })
 }, [page])
 
